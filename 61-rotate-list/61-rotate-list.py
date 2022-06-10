@@ -19,9 +19,9 @@ class Solution:
         curr=head
         for i in range(length-k-1):
             curr=curr.next
-        new_head=curr.next
-        curr.next=None
-        tail.next=head
+        new_head=curr.next # new_head is the start of the split 2
+        curr.next=None # original last element in split 1 points to None
+        tail.next=head # original last element now points to original head
         return new_head
         
         
